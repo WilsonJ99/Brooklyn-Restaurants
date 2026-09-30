@@ -1,0 +1,271 @@
+{
+  "input_file": "DOHMH_New_York_City_Restaurant_Inspection_Results_20260923.csv",
+  "input_rows": 295278,
+  "input_columns": [
+    "CAMIS",
+    "DBA",
+    "BORO",
+    "BUILDING",
+    "STREET",
+    "ZIPCODE",
+    "PHONE",
+    "CUISINE DESCRIPTION",
+    "INSPECTION DATE",
+    "ACTION",
+    "VIOLATION CODE",
+    "VIOLATION DESCRIPTION",
+    "CRITICAL FLAG",
+    "SCORE",
+    "GRADE",
+    "GRADE DATE",
+    "RECORD DATE",
+    "INSPECTION TYPE",
+    "LATITUDE",
+    "LONGITUDE",
+    "COMMUNITY BOARD",
+    "COUNCIL DISTRICT",
+    "CENSUS TRACT",
+    "BIN",
+    "BBL",
+    "NTA",
+    "LOCATION"
+  ],
+  "borough_rows_before_cleaning": 74561,
+  "rows_removed_missing_or_invalid_id_or_cuisine": 923,
+  "rows_after_required_fields_and_exact_deduplication": 73591,
+  "cuisine_merges": {
+    "Hamburgers": "American",
+    "Donuts": "Bakery Products/Desserts",
+    "named_chain_override": "McDonalds, Burger King, Wendys -> American",
+    "matched_chain_restaurants": 79
+  },
+  "unique_restaurants": 7048,
+  "rare_cuisine_threshold_restaurants": 71,
+  "other_cuisines": [
+    "Afghan",
+    "African",
+    "Armenian",
+    "Australian",
+    "Bagels/Pretzels",
+    "Bangladeshi",
+    "Barbecue",
+    "Bottled Beverages",
+    "Brazilian",
+    "Cajun",
+    "Californian",
+    "Chinese/Cuban",
+    "Chinese/Japanese",
+    "Continental",
+    "Creole",
+    "Creole/Cajun",
+    "Czech",
+    "Egyptian",
+    "English",
+    "Ethiopian",
+    "Filipino",
+    "French",
+    "Fusion",
+    "German",
+    "Greek",
+    "Hawaiian",
+    "Hotdogs",
+    "Hotdogs/Pretzels",
+    "Indian",
+    "Indonesian",
+    "Iranian",
+    "Irish",
+    "Korean",
+    "Lebanese",
+    "New American",
+    "New French",
+    "Not Listed/Not Applicable",
+    "Pakistani",
+    "Pancakes/Waffles",
+    "Peruvian",
+    "Polish",
+    "Polynesian",
+    "Portuguese",
+    "Russian",
+    "Salads",
+    "Sandwiches/Salads/Mixed Buffet",
+    "Scandinavian",
+    "Soul Food",
+    "Soups",
+    "Soups/Salads/Sandwiches",
+    "Southeast Asian",
+    "Southwestern",
+    "Steakhouse",
+    "Tapas",
+    "Turkish",
+    "Vegan",
+    "Vegetarian"
+  ],
+  "missing_optional_columns": [],
+  "rows_without_valid_inspection_date": 0,
+  "inspections_with_conflicting_score": 0,
+  "inspections_with_conflicting_grade": 0,
+  "citywide_zip_counts": {
+    "scope": "All five NYC boroughs",
+    "restaurants_with_valid_zip": 30824,
+    "restaurants_missing_valid_zip": 444,
+    "counting_rule": "Latest observed row per CAMIS; cuisine not required",
+    "mapping_source": "https://raw.githubusercontent.com/nychealth/coronavirus-data/master/totals/data-by-modzcta.csv",
+    "top_zip_codes": [
+      {
+        "ZIPCODE": "10003",
+        "AREA": "East Village/Gramercy/Greenwich Village",
+        "DATA BOROUGH": "Manhattan",
+        "restaurants": 804
+      },
+      {
+        "ZIPCODE": "10001",
+        "AREA": "Chelsea/NoMad/West Chelsea",
+        "DATA BOROUGH": "Manhattan",
+        "restaurants": 794
+      },
+      {
+        "ZIPCODE": "10036",
+        "AREA": "Hell's Kitchen/Midtown Manhattan",
+        "DATA BOROUGH": "Manhattan",
+        "restaurants": 755
+      },
+      {
+        "ZIPCODE": "10019",
+        "AREA": "Hell's Kitchen/Midtown Manhattan",
+        "DATA BOROUGH": "Manhattan",
+        "restaurants": 683
+      },
+      {
+        "ZIPCODE": "10002",
+        "AREA": "Chinatown/Lower East Side",
+        "DATA BOROUGH": "Manhattan",
+        "restaurants": 632
+      },
+      {
+        "ZIPCODE": "11354",
+        "AREA": "Flushing/Murray Hill",
+        "DATA BOROUGH": "Queens",
+        "restaurants": 591
+      },
+      {
+        "ZIPCODE": "10013",
+        "AREA": "Hudson Square/Little Italy/SoHo/TriBeCa",
+        "DATA BOROUGH": "Manhattan",
+        "restaurants": 579
+      },
+      {
+        "ZIPCODE": "10011",
+        "AREA": "Chelsea",
+        "DATA BOROUGH": "Manhattan",
+        "restaurants": 533
+      },
+      {
+        "ZIPCODE": "11201",
+        "AREA": "Brooklyn Heights/DUMBO/Downtown Brooklyn",
+        "DATA BOROUGH": "Brooklyn",
+        "restaurants": 516
+      },
+      {
+        "ZIPCODE": "10014",
+        "AREA": "Hudson Square/Meatpacking District/West Village",
+        "DATA BOROUGH": "Manhattan",
+        "restaurants": 510
+      },
+      {
+        "ZIPCODE": "10012",
+        "AREA": "Greenwich Village/SoHo",
+        "DATA BOROUGH": "Manhattan",
+        "restaurants": 508
+      },
+      {
+        "ZIPCODE": "11211",
+        "AREA": "East Williamsburg/Williamsburg (North)/Williamsburg (South)",
+        "DATA BOROUGH": "Brooklyn",
+        "restaurants": 503
+      },
+      {
+        "ZIPCODE": "10018",
+        "AREA": "Hell's Kitchen/Midtown Manhattan",
+        "DATA BOROUGH": "Manhattan",
+        "restaurants": 491
+      },
+      {
+        "ZIPCODE": "10022",
+        "AREA": "East Midtown",
+        "DATA BOROUGH": "Manhattan",
+        "restaurants": 491
+      },
+      {
+        "ZIPCODE": "10016",
+        "AREA": "Kips Bay/Murray Hill/NoMad",
+        "DATA BOROUGH": "Manhattan",
+        "restaurants": 461
+      }
+    ]
+  },
+  "grade_cutoff_source": "https://www.nyc.gov/assets/doh/downloads/pdf/rii/restaurant-grading-faq.pdf",
+  "score_cliff": {
+    "cohort": "Cycle Inspection / Re-inspection",
+    "valid_integer_scores": 4295,
+    "above_display_range": 240,
+    "score_13": 598,
+    "score_14": 24
+  },
+  "inspection_count": 23768,
+  "remediation_flow": {
+    "eligible_initial_cycles": 4674,
+    "unique_restaurants": 3358,
+    "matched_reinspections": 3534,
+    "matched_with_score": 3534,
+    "a_range_reinspections": 2250,
+    "a_share_of_scored_matches": 0.6366723259762309,
+    "observed_a_share_of_all_eligible_cycles": 0.4813863928112965,
+    "method": "First strictly later cycle reinspection before next cycle initial. Same-day records ambiguous. Score ranges are not posted grades."
+  },
+  "neighborhood_cuisines": {
+    "input_restaurants": 7048,
+    "mapped_restaurants": 7018,
+    "unmapped_restaurants": 30,
+    "displayed_areas": 34,
+    "displayed_restaurants": 6996,
+    "minimum_restaurants_per_area": 30,
+    "small_area_restaurants_excluded": 22,
+    "mapping_source": "https://raw.githubusercontent.com/nychealth/coronavirus-data/master/totals/data-by-modzcta.csv",
+    "mapping_note": "NYC Health modified-ZCTA neighborhood labels used as approximate ZIP-area descriptions, not exact neighborhood boundaries."
+  },
+  "borough_cuisines": {
+    "citywide_restaurants": 27519,
+    "borough_counts": {
+      "Bronx": 2420,
+      "Brooklyn": 7048,
+      "Manhattan": 10830,
+      "Queens": 6225,
+      "Staten Island": 996
+    },
+    "top_ten": [
+      "American",
+      "Chinese",
+      "Coffee/Tea",
+      "Pizza",
+      "Bakery Products/Desserts",
+      "Mexican",
+      "Latin American",
+      "Japanese",
+      "Italian",
+      "Caribbean"
+    ],
+    "other_definition": "All cuisines outside citywide top ten",
+    "excluded_rows_missing_id_cuisine_or_valid_borough": 4166
+  },
+  "notes": [
+    "Only missing/invalid CAMIS or missing cuisine removes a row globally; other missing values are handled per chart.",
+    "Missing cuisine rows are removed, not assigned to Other. Other is based on unique restaurant counts, not violation rows.",
+    "Restaurant table selects latest dated row; tied dates use original input order. Undated rows retained for restaurant counts.",
+    "Inspection key: CAMIS + date + inspection type. Conflicting scores/grades set missing rather than chosen arbitrarily.",
+    "Current restaurant cuisine group is applied to historical inspections; cuisine may have changed.",
+    "Grade/score comparisons are descriptive; inspection timing, sample sizes, and restaurant mix differ.",
+    "No missing grade or score is replaced with zero; non-A/B/C grades excluded only from the A/B/C chart.",
+    "Geographic charts describe ZIP codes, not exact neighborhoods. No coordinate columns required.",
+    "Historical counts in a current administrative snapshot should not be interpreted as restaurant openings or closures."
+  ]
+}
