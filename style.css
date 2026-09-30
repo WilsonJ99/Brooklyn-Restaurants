@@ -105,3 +105,4 @@ aside{border-left:1px solid #d9e4e2;padding:24px;background:#fbfdfc}.leader-head
 
 /* Keep long area labels within their cards and grid columns. */
 aside,.detail,.intro>div,.leader-label>span{min-width:0}.detail h3,.detail p,.leader-label>span,.map-readout,h1,#headline{overflow-wrap:anywhere;word-break:normal}.dna-row{flex-wrap:wrap}.detail .numbers{flex-wrap:wrap}
+.view-tabs{justify-content:center}
